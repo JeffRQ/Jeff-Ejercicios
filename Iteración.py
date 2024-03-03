@@ -153,3 +153,4 @@ for ciudad_idx, meses1 in enumerate(temperaturas):
         suma_mes = sum(dia["temp"] for dia in mes)
         promedio1 = suma_mes / len(mes)
         print(f"Promedio de temperaturas en {meses_promedio[meses_idx]}, mes {meses_idx + 1}: {promedio1:.2f} grados")
+
