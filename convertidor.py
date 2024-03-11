@@ -9,3 +9,4 @@ grad_centi = float(input("Ingrese valor grados centigrados"))
 r_farenheit, r_kelvin = convertidorG(grad_centi)
 
 print(" grados farenheit ",  r_farenheit, " grados kelvin ", r_kelvin)
+
