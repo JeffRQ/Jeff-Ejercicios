@@ -127,8 +127,7 @@ temperaturas = [
     #        suma += dia['temp']
 
 
-     #   promedio = suma / len(semana)
-      #  print(f"el promedio de la temperatura es: {promedio}")
+
 
 #for Guayaquil in temperaturas:
  #   for semana in Guayaquil:
@@ -147,10 +146,14 @@ for ciudad_idx, ciudad in enumerate(temperaturas):
         promedio = suma_temperaturas / len(semana)
         print(f"Promedio de temperaturas en {ciudades[ciudad_idx]}, Semana {semana_idx + 1}: {promedio:.2f} grados")
 
-meses_promedio = ["Guayaquil", "Quitó", "Machala"]
-for ciudad_idx, meses1 in enumerate(temperaturas):
-    for meses_idx, mes in enumerate(meses1):
-        suma_mes = sum(dia["temp"] for dia in mes)
-        promedio1 = suma_mes / len(mes)
-        print(f"Promedio de temperaturas en {meses_promedio[meses_idx]}, mes {meses_idx + 1}: {promedio1:.2f} grados")
+ciudades = ["Guayaquil", "Quitó", "Machala"]
+for ciudad_idx, ciudad in enumerate(temperaturas):
+    suma_temperaturas_ciudad = 0
+    cantidad_meses = 0
+    for meses_idx, meses in enumerate(ciudad):
+        suma_mes = sum(dia["temp"] for dia in meses)
+        suma_temperaturas_ciudad += suma_mes
+        cantidad_meses += len(meses)
 
+    promedio_ciudad = suma_temperaturas_ciudad / cantidad_meses
+    print(f"Promedio de temperaturas en {ciudades[ciudad_idx]}: {promedio_ciudad:.2f} grados")
