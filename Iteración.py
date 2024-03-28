@@ -157,4 +157,3 @@ for ciudad_idx, ciudad in enumerate(temperaturas):
 
     promedio_ciudad = suma_temperaturas_ciudad / cantidad_meses
     print(f"Promedio de temperaturas en {ciudades[ciudad_idx]}: {promedio_ciudad:.2f} grados")
-
