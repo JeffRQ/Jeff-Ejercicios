@@ -20,10 +20,10 @@ archivo.close()
 archivo = open("My_notes.txt", "r")
 
 # Leer los datos del archivo actualizado y almacenarlos en una variable
-contenido_actualizado = archivo.read()
+datos_actualizados = archivo.read()
 
 # Imprimir actializacion
-print(contenido_actualizado)
+print(datos_actualizados)
 
 # Cerrar el archivo después de la última lectura
 archivo.close()
